@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <title>Order Form</title>
+    <script>
+	
+        function cal() {
+            var odno = document.getElementById("orderno").value;
+            var ordate = document.getElementById("orderdate").value;
+            var cno = document.getElementById("customerno").value;
+            var pname = document.getElementById("productname").value;
+			var cname = document.getElementById("customername").value;
+			var pq = document.getElementById("productquantity").value;
+            var pp = document.getElementById("productprice").value;
+            var cmob = document.getElementById("customermobileno").value;
+			var add = document.getElementById("delivaryaddress").value;
+		var amt = (pq*pp);
+			document.write("<b><u>Reciept</b></u><br><br>");
+            document.write("Order no  : " + odno + "<br>");
+			document.write("Order date  : " + ordate + "<br>");
+			document.write("Customer no  : " + cno + "<br>");
+			document.write("Customer name : " + cname + "<br>");
+			document.write("Product name is : " + pname + "<br>");
+			document.write("Product quantity (in pieces): " + pq + "<br>");
+			document.write("Product price (per piece): " + pp + "<br>");
+			document.write("You have to pay : Rs." + amt + "<br>");			
+			document.write("We will contact you on : " + cmob + "<br>");
+			document.write("Your order will be delivered on address : " + add + "<br>");
+			 }
+    </script>
+</head>
+
+<body>
+    <form>
+        <table border="1">
+            <tr>
+                <td colspan="2" align="center">
+                    <b>CUSTOMER DATA</b></td>
+            </tr>
+            <tr>
+                <td> Order no: </td>
+                <td><input type="text" id="orderno"> </td>
+            </tr>
+            <tr>
+                <td> ORDER DATE :</td>
+                <td>
+                    <input type="date" id="orderdate">
+                </td>
+            </tr>
+            <tr>
+                <td> CUSTOMER NO :</td>
+                <td>
+                    <input type="text" id="customerno">
+                </td>
+            </tr>
+            <tr>
+                <td>CUSTOMER NAME:</td>
+                <td>
+                    <input type="text" id="customername">
+                </td>
+            </tr>
+			<tr>
+                <td>PRODUCT NAME:</td>
+                <td>
+                    <input type="text" id="productname">
+                </td>
+            </tr>
+            <tr>
+                <td>PRODUCT QUANTITY(NO. OF PIECES):</td>
+                <td>
+                    <input type="text" id="productquantity">
+                </td>
+            </tr>
+            <tr>
+                <td>PRODUCT PRICE(PER PIECE):</td>
+                <td>
+                    <input type="text" id="productprice">
+                </td>
+            </tr>
+			 <tr>
+                <td>CUSTOMER MOBILE NO:</td>
+                <td>
+                    <input type="text" id="customermobileno">
+                </td>
+            </tr>
+			 <tr>
+                <td>DELIVARY ADDRESS:</td>
+                <td>
+                    <input type="text" id="delivaryaddress">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="button" value="calculate" onclick="cal()"></td>
+
+            </tr>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
+			
